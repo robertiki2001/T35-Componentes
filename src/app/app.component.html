@@ -1,0 +1,30 @@
+<router-outlet></router-outlet>
+<div class="p-5">
+  <h2>Alta Cliente</h2>
+  <div class="w-25 my-5">
+    <div class="w-50 my-2 d-flex flex-row justify-content-between">
+      <label for="nombre">Nombre: </label>
+      <input type="text" [(ngModel)]="nombre">
+    </div>
+    <div class="w-50 my-2 d-flex flex-row justify-content-between">
+      <label for="cif">CIF: </label>
+      <input type="text" [(ngModel)]="cif">
+    </div>
+    <div class="w-50 my-2 d-flex flex-row justify-content-between">
+      <label for="direccion">Dirección: </label>
+      <input type="text" [(ngModel)]="direccion">
+    </div>
+    <div class="w-50 my-2 d-flex flex-row justify-content-between">
+      <label for="grupo">Grupo: </label>
+      <select [(ngModel)]="grupo">
+        <option value="Sin definir">Sin definir</option>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+      </select>
+    </div>
+    <button (click)="guardar()" class="btn btn-secondary mt-3">Guardar</button>
+  </div>
+  <app-lista-clientes [datos]="registros"></app-lista-clientes>
+</div>

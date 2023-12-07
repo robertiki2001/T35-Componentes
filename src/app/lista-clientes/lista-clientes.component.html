@@ -1,0 +1,11 @@
+<h2 *ngIf="datos.length > 0">Lista Clientes</h2>
+<table *ngIf="datos.length > 0">
+  <tbody>
+    <tr *ngFor="let art of datos" class="border-bottom">
+      <td class="px-5 py-1">{{art.nombre}}</td>
+      <td class="px-5 py-1">{{art.cif}}</td>
+      <td class="px-5 py-1">{{art.direccion}}</td>
+      <td class="px-5 py-1">{{art.grupo}}</td>
+    </tr>
+  </tbody>
+</table>
